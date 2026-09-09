@@ -14,9 +14,8 @@ cask "relarm" do
   # The app is ad-hoc signed, so a quarantined first launch would hit the
   # Gatekeeper "could not verify" dialog. Strip just the quarantine flag
   # after install; the sha256 above still pins the download.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Relarm.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Relarm.app"]
   end
 
   zap trash: "~/Library/Preferences/com.nikhilweee.relarm.plist"
