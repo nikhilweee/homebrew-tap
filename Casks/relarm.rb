@@ -1,6 +1,6 @@
 cask "relarm" do
-  version "0.3.0"
-  sha256 "9b3cd5c39c10e03793df8edddd5a47e44324c783baf59ac75f09582a2c2987c3"
+  version "0.4.0"
+  sha256 "a7c41be8289f45e7f9cb6af3f85dd84c8a7a3884522224236c938293aec50364"
 
   url "https://github.com/nikhilweee/relarm/releases/download/v#{version}/Relarm.zip"
   name "Relarm"
